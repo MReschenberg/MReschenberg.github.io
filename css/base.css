@@ -1,4 +1,10 @@
+
 body {
 	background-color: #ccc;
 	font-family: tahoma;
+}
+
+h1 {
+	color: maroon;
+	text-transform: underline;
 }
