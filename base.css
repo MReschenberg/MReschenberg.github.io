@@ -56,7 +56,8 @@ h3 {
   height: 33px;
 }
 #maintext {
-  padding: 20px;
+  padding: 15px;
+  padding-bottom: 30px;
   background: #eeeeee;
   margin-top: auto;
   margin-right: auto;
