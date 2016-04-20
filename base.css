@@ -63,8 +63,9 @@ h3 {
   margin-left: 325px;
   margin-top: -113px;
   width: 850px;
-  height: 500px;
+  height: 100%;
   font-family: tahoma;
+  position: fixed;
   text-align: left;
   overflow: scroll;
 }
