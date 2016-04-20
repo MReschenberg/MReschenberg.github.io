@@ -1,59 +1,88 @@
-/*
- * Style tweaks
- * --------------------------------------------------
- */
-html,
 body {
-  overflow-x: hidden; /* Prevent scroll on narrow devices */
+  background-color: #eeeeee;
+  font-size: 13px;
 }
-body {
-  padding-top: 70px;
+h1 {
+  text-align: left;
+  font-size: 30px;
+  font-family: arial;
+  color: #333344;
+  border-bottom: SOLID #333344 2px;
 }
-footer {
-  padding: 30px 0;
+h2 {
+  background: #333344;
+  font-family: arial;
+  font-size: 30px;
+  color: #FEFEF2;
+  margin-left: -10px;
+  padding: 2px;
 }
-
-/*
- * Off Canvas
- * --------------------------------------------------
- */
-@media screen and (max-width: 767px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all .25s ease-out;
-         -o-transition: all .25s ease-out;
-            transition: all .25s ease-out;
-  }
-
-  .row-offcanvas-right {
-    right: 0;
-  }
-
-  .row-offcanvas-left {
-    left: 0;
-  }
-
-  .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -50%; /* 6 columns */
-  }
-
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -50%; /* 6 columns */
-  }
-
-  .row-offcanvas-right.active {
-    right: 50%; /* 6 columns */
-  }
-
-  .row-offcanvas-left.active {
-    left: 50%; /* 6 columns */
-  }
-
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 50%; /* 6 columns */
-  }
+#side {
+  padding: 10px;
+  height: 100%;
+  width: 200px;
+  background: #FEFEF2;
+  margin-top: -113px;
+  left: 0px;
+  font-family: tahoma;
+  border-left: SOLID #333344 30px;
+}
+#topcolor {
+  background: #333344;
+  width: 100%;
+  height: 33px;
+}
+#twocolor {
+  background: #777788;
+  width: 100%;
+  height: 33px;
+}
+#threecolor {
+  background: #aaccaa;
+  width: 100%;
+  height: 33px;
+}
+#maintext {
+  padding: 12px;
+  background: #FEFEF2;
+  margin-top: 0px;
+  margin-left: 300px;
+  width: 700px;
+  height: auto;
+  font-family: tahoma;
+  text-align: left;
+}
+.link {
+  display: block;
+  height: 30px;
+  width: 100px;
+  font: tahoma;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  background: #333344;
+  border-right: SOLID 15px #eeeeee;
+  margin-left: -10px;
+}
+#story {
+  height: 200px;
+  width: 600px;
+  background: #eeeeee;
+  border: 2px solid #333344;
+  padding: 5px;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+a:hover {
+  font-size: 20px;
+  text-align: right;
+}
+h3 {
+  background: transparent;
+  height: 15px;
+  font-family: arial;
+  text-align: right;
+  color: -blocked- -blocked-;
+  margin-top: -20px;
 }
