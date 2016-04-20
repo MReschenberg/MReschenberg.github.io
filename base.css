@@ -1,6 +1,7 @@
 body {
-  background-color: #eeeeee;
+  background-color: #fff;
   font-size: 13px;
+  font-family: "Open Sans", "Helvetica", "Arial", sans serif;
 }
 h1 {
   text-align: left;
@@ -10,47 +11,61 @@ h1 {
   border-bottom: SOLID #333344 2px;
 }
 h2 {
-  background: #333344;
   font-family: arial;
-  font-size: 30px;
-  color: #FEFEF2;
+  font-size: 25px;
+  color: #333344;
+  border-bottom: 2px dotted #333344;
   margin-left: -10px;
   padding: 2px;
 }
+h3 {
+  height: 15px;
+  font-family: arial;
+  text-align: right;
+  color: #333344;
+  margin-top: -20px;
+}
 #side {
-  padding: 10px;
+  padding: 20px;
   height: 100%;
   width: 200px;
-  background: #FEFEF2;
+  background: #eeeeee;
   margin-top: -113px;
-  left: 0px;
+  left: 20px;
   font-family: tahoma;
-  border-left: SOLID #333344 30px;
 }
 #topcolor {
   background: #333344;
   width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
   height: 33px;
 }
 #twocolor {
   background: #777788;
+  margin-left: 0px;
+  margin-right: 0px;
   width: 100%;
   height: 33px;
 }
 #threecolor {
   background: #aaccaa;
+  margin-left: 0px;
+  margin-right: 0px;
   width: 100%;
   height: 33px;
 }
 #maintext {
   padding: 12px;
-  background: #FEFEF2;
-  margin-top: 0px;
-  margin-left: 300px;
-  width: 700px;
-  height: auto;
+  background: #eeeeee;
+  margin-top: auto;
+  margin-right: auto;
+  margin-left: 325px;
+  width: 850px;
+  height: 500px;
   font-family: tahoma;
   text-align: left;
+  overflow: scroll;
 }
 .link {
   display: block;
@@ -59,10 +74,7 @@ h2 {
   font: tahoma;
   font-size: 20px;
   text-decoration: none;
-  color: #fff;
-  background: #333344;
-  border-right: SOLID 15px #eeeeee;
-  margin-left: -10px;
+  color: #333344;
 }
 #story {
   height: 200px;
@@ -77,12 +89,4 @@ h2 {
 a:hover {
   font-size: 20px;
   text-align: right;
-}
-h3 {
-  background: transparent;
-  height: 15px;
-  font-family: arial;
-  text-align: right;
-  color: -blocked- -blocked-;
-  margin-top: -20px;
 }
