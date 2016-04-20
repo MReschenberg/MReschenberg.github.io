@@ -25,6 +25,10 @@ h3 {
   color: #333344;
   margin-top: -20px;
 }
+#bottomMargin {
+  width:100%;
+  padding:10px;
+}
 #side {
   padding: 20px;
   height: 100%;
