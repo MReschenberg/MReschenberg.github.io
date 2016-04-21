@@ -4,6 +4,9 @@ body {
   color: #000;
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
 }
+img {
+  display: inline-block;
+}
 h1 {
   text-align: left;
   font-size: 30px;
@@ -26,9 +29,9 @@ a:hover {
 }
 #footer {
   text-align: center;
+  bottom: 0px;
   width:100%;
   padding:10px;
-  padding-bottom: 15px;
 }
 #side {
   top:0px;
@@ -60,7 +63,7 @@ a:hover {
   padding-top:0px;
   color: #333344;
 }
-#story {
+#description {
   height: 200px;
   width: 600px;
   background: transparent;
