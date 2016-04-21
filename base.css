@@ -13,6 +13,16 @@ h2 {
   font-size: 18px;
   color: #000;
   text-transform: uppercase;
+  padding-bottom: 0px;
+}
+b {
+  color: #F07241;
+}
+i {
+  color: #3299BB;
+}
+a:hover {
+  color: #BCBCBC;
 }
 #footer {
   text-align: center;
@@ -29,27 +39,6 @@ h2 {
   background: #fff;
   position: fixed;
   overflow: hidden;
-}
-#topcolor {
-  display:none;
-  background: #000;
-  width: 100%;
-  margin: 0px;
-  height: 33px;
-}
-#twocolor {
-  display:none;
-  background: #424242;
-  margin: 0px;
-  width: 100%;
-  height: 34px;
-}
-#threecolor {
-  display:none;
-  background: #BCBCBC;
-  margin: 0px;
-  width: 100%;
-  height: 33px;
 }
 #maintext {
   padding: 15px;
@@ -81,6 +70,4 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
-a:hover {
-  color: #BCBCBC;
-}
+
