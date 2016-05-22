@@ -3,23 +3,40 @@
   src: url('fonts/Voga-Medium.otf');
 }
 
-body {
+p, body {
   background-color: #fff;
+  text-decoration: none;
   font-size: 13px;
   color: #000;
-  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 img {
   display: inline-block;
 }
 h1 {
-  font-family: 'Rosario';
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 1px;  font-size: 18px;
+  letter-spacing: 5px;  
+  font-size: 18px;
   color: #000;
   padding:5px;
   border: 2px SOLID #C6DBDA;
+}
+h2 {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size:20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight:300;
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
 }
 b {
   color: #F07241;
@@ -51,7 +68,7 @@ i {
   font-family:times;
   text-align: center;
   display:table;
-  width: 80vw;
+  width: 82vw;
   margin-top: -2vh;
   margin-left:auto;
   margin-right:auto;
@@ -64,7 +81,7 @@ i {
   padding: 15px;
   background: #fff;
   margin: auto;
-  width: 850px;
+  width: 80vw;
   text-align: left;
   overflow: scroll;
   overflow-x: hidden;
@@ -73,10 +90,9 @@ i {
   height: 30px;
   width: 100px;
   font-size: 20px;
-  font-family: 'Rosario';
+  font-weight:300;
   text-transform: lowercase;
   letter-spacing: 3px;
-  text-decoration: none;
   padding:20px;
   padding-top:0px;
   color: #fff;
@@ -84,11 +100,9 @@ i {
 #description {
   height: 200px;
   width: 600px;
-  background: transparent;
-  border: 2px solid #BCBCBC;
-  padding: 5px;
+  padding:5px;
+  border: 2px SOLID #C6DBDA;
   overflow: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin:auto;
 }
 
