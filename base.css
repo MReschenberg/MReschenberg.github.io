@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Voga';
+  src: url('fonts/Voga-Medium.otf');
+}
+
 body {
   background-color: #E9E9E9;
   overflow:hidden;
@@ -9,24 +14,37 @@ img {
   display: inline-block;
 }
 h1 {
+  font-family: 'Voga';
   text-align: left;
-  font-size: 30px;
+  font-size: 50px;
   color: #000;
 }
 h2 {
-  font-size: 18px;
-  color: #000;
+  font-family: 'Rosario';
   text-transform: uppercase;
-  padding-bottom: 0px;
+  letter-spacing: 1px;  font-size: 18px;
+  color: #000;
+  padding:5px;
 }
 b {
   color: #F07241;
 }
 i {
-  color: #3299BB;
+  color: #9EAFAE;
 }
 a:hover {
-  color: #BCBCBC;
+  color: #9EAFAE;
+}
+#header {
+  font-family: 'Josefin Slab', serif;
+  width: 100vw;
+  height: 30vh;
+  overflow:hidden;
+  margin-top: -8px;
+  margin-left: -8px;
+  letter-spacing: 5px;
+  background: #C6DBDA;
+  text-align: center;
 }
 #footer {
   text-align: center;
@@ -35,19 +53,21 @@ a:hover {
   padding:10px;
 }
 #side {
-  top:0px;
-  margin-left:-10px;
-  width: 100vw;
-  max-height: 100px;
-  border: 2px SOLID #BCBCBC;
-  background: #fff;
-  position: fixed;
+  font-family:times;
+  text-align: center;
+  width: 80vw;
+  margin-top: -1vh;
+  margin-left:auto;
+  margin-right:auto;
+  color: #fff;
+  padding:auto;
+  height: 6vh;
+  background: #000;
   overflow: hidden;
 }
 #maintext {
   padding: 15px;
   background: #fff;
-  border: 2px SOLID #BCBCBC;
   margin: auto;
   height: 95vh;
   width: 850px;
@@ -59,10 +79,13 @@ a:hover {
   height: 30px;
   width: 100px;
   font-size: 20px;
+  font-family: 'Rosario';
+  text-transform: uppercase;
+  letter-spacing: 1px;
   text-decoration: none;
   padding:20px;
   padding-top:0px;
-  color: #333344;
+  color: #fff;
 }
 #description {
   height: 200px;
