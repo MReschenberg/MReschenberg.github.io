@@ -66,14 +66,14 @@ i {
 }
 #side {
   font-family:times;
-  text-align: center;
+  text-align: right;
   display:table;
-  width: 82vw;
+  width: 102vw;
+  height: 8vh;
   margin-top: -2vh;
-  margin-left:auto;
+  margin-left: -2vw;
   margin-right:auto;
   color: #fff;
-  height: 6vh;
   background: #000;
   overflow: hidden;
 }
