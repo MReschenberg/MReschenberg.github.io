@@ -6,39 +6,40 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600');
 
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    opacity: .5;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: grey;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:left;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
+  padding-left: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  display: block;
+  transition: 0.3s
 }
 
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
+
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
@@ -46,11 +47,13 @@
 }
 
 
-p, body {
-  background-color: #fff;
+p, body, .maintext {
+  padding: 15px;
+  text-align: left;
+  color: black;
+  background-color: #eee;
   text-decoration: none;
   font-size: 13px;
-  color: #000;
   font-family: 'Open Sans', sans-serif;
 }
 img {
@@ -97,17 +100,14 @@ i {color: #9EAFAE;}
   color: #fff;
   height: 100vh;
   background: white;
-  overflow: hidden;
-  position:absolute;
+  overflow: wrap;
+  position: absolute;
+  opacity:.5;
 }
-.maintext {
-  padding: 15px;
-  background: #fff;
-  margin: auto;
-  width: 80vw;
-  text-align: left;
-  color: black;
+.sidebar:hover {
+  opacity: 1;
 }
+
 
 #description {
   height: 200px;
