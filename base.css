@@ -12,11 +12,11 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #808B96;
+  background-color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  opacity: 0.5;
+  opacity: 0.7;
   text-align:left;
 }
 
@@ -24,13 +24,13 @@
   padding-left: 15px;
   text-decoration: none;
   font-size: 15px;
-  color: white;
+  color: black;
   display: block;
   transition: 0.3s
 }
 
 .sidenav a:hover, .offcanvas a:focus{
-  color: black;
+  color: grey;
 }
 
 .sidenav .closebtn {
@@ -94,6 +94,7 @@ b, i {color: #808B96;}
   overflow: wrap;
   position: absolute;
   opacity:.5;
+  transition: width .2s;
 }
 #sidebar:hover {
   opacity: 1;
