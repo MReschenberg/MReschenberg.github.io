@@ -12,15 +12,16 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: grey;
+  background-color: #808B96;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  opacity: 0.5;
   text-align:left;
 }
 
 .sidenav a {
-  padding-left: 5px;
+  padding-left: 15px;
   text-decoration: none;
   font-size: 15px;
   color: white;
@@ -29,7 +30,7 @@
 }
 
 .sidenav a:hover, .offcanvas a:focus{
-  color: #f1f1f1;
+  color: black;
 }
 
 .sidenav .closebtn {
@@ -47,7 +48,7 @@
 }
 
 
-p, body, .maintext {
+p, body, #maintext {
   padding: 15px;
   text-align: left;
   color: black;
@@ -56,24 +57,23 @@ p, body, .maintext {
   font-size: 13px;
   font-family: 'Open Sans', sans-serif;
 }
+
+#maintext {
+  transition: margin-left .5s;
+  overflow:hidden; 
+  height:100vh; 
+  width: 90%; 
+  margin-left:50px;
+}
 img {
   display: inline-block;
 }
+
 h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 5px;  
-  font-size: 18px;
-  color: #000;
-  padding:5px;
-  border: 2px SOLID black;
-}
-h2 {
   font-family: 'Open Sans';
   font-weight: 300;
-  font-size:20px;
+  color: #808B96;
+  font-size:18px;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
@@ -84,8 +84,7 @@ a {
   color: #000;
   font-family: 'Open Sans', sans-serif;
 }
-b {color: #F07241;}
-i {color: #9EAFAE;}
+b, i {color: #808B96;}
 
 #footer {
   text-align: center;
@@ -93,18 +92,18 @@ i {color: #9EAFAE;}
   width:100%;
   padding:10px;
 }
-.sidebar {
+#sidebar {
   width: 50px;
   top:0;
   left:0;
-  color: #fff;
+  color: #808B96;
   height: 100vh;
   background: white;
   overflow: wrap;
   position: absolute;
   opacity:.5;
 }
-.sidebar:hover {
+#sidebar:hover {
   opacity: 1;
 }
 
