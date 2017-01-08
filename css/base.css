@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Voga';
-  src: url('fonts/Voga-Medium.otf');
+  src: url('../fonts/Voga-Medium.otf');
 }
 
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600');
@@ -91,8 +91,8 @@ b, i {color: #808B96;}
   color: #808B96;
   height: 100vh;
   background: white;
-  overflow: wrap;
-  position: absolute;
+  overflow: hidden;
+  position: fixed;
   opacity:.5;
   transition: width .2s;
 }
