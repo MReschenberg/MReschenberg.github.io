@@ -1,7 +1,7 @@
 body {
 	background: url("img/header.jpg");
 	background-size: auto 100%;
-	background-repeat: repeat-x;
+	background-repeat: no-repeat;
 	height: 100vh;
 	overflow: hidden;
 }
@@ -9,5 +9,5 @@ body {
 	width: 40%;
 	position: absolute;
 	top:0;
-	right:5%;
+	right:0;
 }
