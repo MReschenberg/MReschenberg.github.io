@@ -41,12 +41,10 @@
   margin-left: 50px;
 }
 
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
 
 p, body, #maintext {
   padding: 15px;
@@ -86,12 +84,6 @@ a {
 }
 b, i {color: #808B96;}
 
-#footer {
-  text-align: center;
-  bottom: 0px;
-  width:100%;
-  padding:10px;
-}
 #sidebar {
   width: 50px;
   top:0;
