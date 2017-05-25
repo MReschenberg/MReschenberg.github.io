@@ -8,8 +8,13 @@ body {
 	overflow: hidden;
 }
 #maintext {
-	width: 40%;
+	width: 30%;
 	position: absolute;
-	top:0;
+	overflow: hidden;
 	right:0;
+	top:0;
+}
+
+#footer {
+	display:none;
 }

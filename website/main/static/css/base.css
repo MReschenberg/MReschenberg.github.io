@@ -14,11 +14,12 @@
   overflow: hidden;
   position: fixed;
   opacity:.5;
+  transition: opacity 1.5s;
   transition: width .2s;
 }
 #sidebar:hover {
   opacity: 1;
-  transition:0.5s;
+  transition: 1.5s;
 }
 
 .sidenav {
@@ -79,6 +80,11 @@ p, body, #maintext {
   transition: margin-left 1.5s;
   margin-left: 50px;
 }
+#footer {
+  margin-bottom: 0;
+  bottom:0;
+}
+
 img {
   display: inline-block;
 }
