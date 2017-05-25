@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+<!-- head tag data -->
+{% block title %} Morgan Rae Reschenberg {% endblock %}
+	
+
+<!-- MainText content-->
+{% block content %}
+
+	<h1>Projects</h1>
+
+	<h2>Computer Science Project Portfolio</h2>
+	<div id="description">
+	  - <b>Text Editor</b> Showcasing Java language fluency and data structure implementation. Built from the ground up without starter code for Berkeley's Data Structures course. Functional text editor with copy/paste/cut and undo/redo support, delete and insert capabilities, and customisable interface. Structures included: custom linked list structure, stacks, queues, Array Lists. Interface is navigatable via arrow keys, keyboard commands (using command or control on MacOS or Windows machines respectively), and point-and-click cursor interaction. <br>
+	  - <b>CPU schematic</b> Showcasing LogiSim experience, circuit design understanding, MIPS fluency, and computer architecture knowledge. This CPU features a two-stage pipeline with holding registers and implements 22 regular MIPS instructions and five MIPS pseudoinstructions. It also contains several nested circuits which I also designed (ALU, Control, Register File, etc.).<br>
+	  - <b>MIPS Assembler, Linker</b> 
+	</div>
+
+
+	<h2>CalTeach Portfolio</h2>
+	<div id="description">
+	  - <b>Math Lesson</b> Taught in a third grade math classroom at Rosa Parks Elementary (An Environmental Science magnet school) during my first year of student teaching. Standards, lesson objectives, student work, and feedback included. This lesson plan was structured with a 5E template and employed activities from the NY Engage curriculum for third grade. <br>
+	  - <b>Computer Science</b> This lesson has not been field tested, but was written to showcase how to integrate History and other non-STEM subjects into STEM classrooms. Here, the History of the first computer is used to spur student interest in Recursion and Iteration. This lesson is also done in the 5E format and contains supplementals (lecture slides, activity materials, etc). Before constructing this lesson, I completed a prospectus and ressearch paper on the history of the first computer which can be found here.<br>
+	  - <b>Math Lesson</b> This math lesson was taught in an Honours Math Analysis class consisting mostly of 10th (and some 11th) grade students at Berkeley High School. Constructed as part of a class on inquiry-based lesson design, this lesson is done in the 5E format and is very student driven. Examples of student work can be found here. I analysed this lesson in several forms, completing a problem analysis, collecting and analysing video data, creating a research poster, and completing a final research paper on the results of my study. <br>
+	</div>
+
+	<h2>Photography Portfolio</h2>
+	<div id="description">
+	 Coming soon!
+	</div>
+
+
+{% endblock %}
+
+{% block footer %}
+	<br><br>Copyright Morgan Rae Reschenberg 2017<br>
+    100% Oringinal content unless otherwise noted. Please do not reproduce without permission.
+{% endblock %}
+
+<!-- Javascript Stuff -->
+{% block javascripts %}
+    <script src="{% static 'js/menu.js' %}"></script>
+{% endblock %}
+
