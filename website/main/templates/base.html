@@ -4,11 +4,12 @@
   <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+    {% block css %}
+    {% endblock %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600" rel="stylesheet" type="text/css"/>
-    {% block css %}
-    {% endblock %}
+    
   </head>
   <body>
     <div id="mySidenav" class="sidenav">
