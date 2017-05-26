@@ -9,7 +9,7 @@ class AboutPageView(TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'aboutme.html', context=None)
 
-class ProjectPageView(TemplateView):
+class ProjectsPageView(TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'projlanding.html', context=None)
 
@@ -25,6 +25,6 @@ class CSPageView(TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'cs.html', context=None)        
 
-class PhotoPageView(TemplateView):
+class PhotogPageView(TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'photography.html', context=None)
