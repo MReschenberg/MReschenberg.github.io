@@ -6,24 +6,22 @@
 
 #cs, #calteach, #photography {
 	width: 90%;
-	font-size: 25px;
 	height: 100px;
-	color: #fff;
 	text-align: center;
 	display: table;
+}
+.barlinks {
+	font-size: 25px;
+	color: #fff;
+	text-align: center;
+	display:table-cell;
+	vertical-align: middle;
 	transition: font-size 1s;
 }
 
-#cs:hover, #calteach:hover, #photography:hover {
+.barlinks:hover {
 	transition: font-size 1s;
 	font-size: 30px;
-}
-
-span {
-	margin: auto;
-	text-align: center;
-	display: table-cell;
-	vertical-align: middle;
 }
 
 #cs {
