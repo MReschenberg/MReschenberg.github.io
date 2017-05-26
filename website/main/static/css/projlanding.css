@@ -1,4 +1,22 @@
 #maintext {
 	width: 100%;
-	background: #fff;
+}
+
+#cs, #calteach, #photography {
+	width: 100%;
+	font-size: 20px;
+	height: 500px;
+	color: #fff;
+}
+
+#cs {
+	background: #A6645E;
+}
+
+#calteach {
+	background: #3E496C;
+}
+
+#photography {
+	background: #836A65;
 }
