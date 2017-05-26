@@ -11,8 +11,20 @@ class AboutPageView(TemplateView):
 
 class ProjectPageView(TemplateView):
     def get(self, request, **kwargs):
-        return render(request, 'projects.html', context=None)
+        return render(request, 'projlanding.html', context=None)
 
 class OrgPageView(TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'organisations.html', context=None)        
+
+class CalTeachPageView(TemplateView):
+    def get(self, request, **kwargs):
+        return render(request, 'calteach.html', context=None)
+
+class CSPageView(TemplateView):
+    def get(self, request, **kwargs):
+        return render(request, 'cs.html', context=None)        
+
+class PhotoPageView(TemplateView):
+    def get(self, request, **kwargs):
+        return render(request, 'photography.html', context=None)
