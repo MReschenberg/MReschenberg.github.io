@@ -108,12 +108,4 @@ a {
 }
 b, i {color: #808B96;}
 
-#description {
-  height: 200px;
-  width: 75%;
-  padding:5px;
-  border: 2px SOLID #C6DBDA;
-  overflow: auto;
-  margin:auto;
-}
 

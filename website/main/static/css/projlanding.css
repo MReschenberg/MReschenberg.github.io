@@ -1,12 +1,32 @@
+#body {
+	margin: 0 0 0 0;
+	padding: 0px;
+}
 #maintext {
 	width: 100%;
+	margin: 0 0 0 0;
 }
 
 #cs, #calteach, #photography {
 	width: 100%;
 	font-size: 20px;
-	height: 500px;
+	height: 200px;
 	color: #fff;
+	text-align: center;
+	display: table;
+	transition: font-size 1s;
+}
+
+#cs:hover, #calteach:hover, #photography:hover {
+	transition: font-size 1s;
+	font-size: 30px;
+}
+
+span {
+	margin: auto;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 #cs {
@@ -18,5 +38,5 @@
 }
 
 #photography {
-	background: #836A65;
+	background: #B39996;
 }
