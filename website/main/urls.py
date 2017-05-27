@@ -9,5 +9,4 @@ urlpatterns = [
     url(r'^projects/calteach/$', views.CalTeachPageView.as_view()), 
     url(r'^projects/cs/$', views.CSPageView.as_view()), 
     url(r'^projects/photography/$', views.PhotogPageView.as_view()), 
-
 ]
