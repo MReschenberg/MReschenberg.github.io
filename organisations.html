@@ -1,38 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Morgan Rae Reschenberg</title>
 
-{% extends "base.html" %}
-{% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
 
-<!-- head tag data -->
-{% block title %} Morgan Rae Reschenberg {% endblock %}
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600" rel="stylesheet" type="text/css"/>
+    
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>  
+
+      <a href="/">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projlanding.html">Projects</a>
+      <a href="organisations.html">Organisations</a>
+      <a href="img/Resume.pdf">Resume</a>
+      <a href="mailto:mreschenberg@berkeley.edu"><img src="img/cloud.png" height="25" width="25"> Email</a><br>
+      <a href="https://www.linkedin.com/in/morgan-rae-reschenberg-28b521a7"><img src="img/linkedin.png" height="25" width="25"> LinkedIn </a><br>
+      <a href="https://github.com/MReschenberg"><img src="img/git.png" height="25" width="25"> GitHub </a><br>
+      <a href="https://www.instagram.com/makxine/"><img src="img/insta.png" height="25" width="25"> Instagram </a><br>
+    </div>
+
+    <div id="sidebar">
+      <span style="font-size:30px;cursor:pointer;color:black;padding:10px;" onclick="openNav()">&#9776;</span>
+    </div>
 
 
-<!-- MainText content-->
-{% block content %}
-
-	<h1>Organisations</h1>
-
-	<h2>Organisation</h2>
-	<b>Position</b><br>
-	<i>2016 - Present</i><br>
-	This is a description about the thing and here is what I do in the position I have. My responsibilities include doing things like the following. May also include awards or recognitions received in this position.
-	<ul>
-		<li>I managed people and projects such as thing and thing and thing </li>
-		<li>On these projects I specifically did this and this</li>
-		<li>I also worked with these people and we did this</li>
-	</ul>
-	<br>
-
-
-	<h2>Organisation</h2>
-	<b>Position</b><br>
-	<i>2016 - Present</i><br>
-	This is a description about the thing and here is what I do in the position I have. My responsibilities include doing things like the following. May also include awards or recognitions received in this position.
-	<ul>
-		<li>I managed people and projects such as thing and thing and thing </li>
-		<li>On these projects I specifically did this and this</li>
-		<li>I also worked with these people and we did this</li>
-	</ul>
-	<br>
+    <div id="maintext">
+        <h1>Organisations</h1>
 
 	<h2>Organisation</h2>
 	<b>Position</b><br>
@@ -57,14 +55,37 @@
 	</ul>
 	<br>
 
-{% endblock %}
+	<h2>Organisation</h2>
+	<b>Position</b><br>
+	<i>2016 - Present</i><br>
+	This is a description about the thing and here is what I do in the position I have. My responsibilities include doing things like the following. May also include awards or recognitions received in this position.
+	<ul>
+		<li>I managed people and projects such as thing and thing and thing </li>
+		<li>On these projects I specifically did this and this</li>
+		<li>I also worked with these people and we did this</li>
+	</ul>
+	<br>
 
-{% block footer %}
-	<br><br>Copyright Morgan Rae Reschenberg 2017<br>
+
+	<h2>Organisation</h2>
+	<b>Position</b><br>
+	<i>2016 - Present</i><br>
+	This is a description about the thing and here is what I do in the position I have. My responsibilities include doing things like the following. May also include awards or recognitions received in this position.
+	<ul>
+		<li>I managed people and projects such as thing and thing and thing </li>
+		<li>On these projects I specifically did this and this</li>
+		<li>I also worked with these people and we did this</li>
+	</ul>
+	<br>
+        
+        <div id="footer">
+         <br><br>Copyright Morgan Rae Reschenberg 2017<br>
     100% Oringinal content unless otherwise noted. Please do not reproduce without permission.
-{% endblock %}
+        </div>
+    </div>
 
-{% block javascripts %}
-	<script src="{% static 'js/menu.js' %}"></script>
-{% endblock %}
+
+    <script src="js/menu.js"></script>
+  </body>
+</html>
 
