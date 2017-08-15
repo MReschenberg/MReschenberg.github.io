@@ -1,23 +1,48 @@
-{% extends "base.html" %}
-{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Morgan Rae Reschenberg</title>
 
-<!-- head tag data -->
-{% block title %} Morgan Rae Reschenberg {% endblock %}
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/projlanding.css"/>
 
-{% block css %}
-<link href="{% static 'css/projlanding.css' %}" rel="stylesheet">
-{% endblock %}
 
-<!-- MainText content-->
-{% block content %}
- <div id="cs"><a href="/projects/cs/" class="barlinks">Computer Science</a></div>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600" rel="stylesheet" type="text/css"/>
+    
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>  
 
- <div id="calteach"><a href="/projects/calteach/" class="barlinks">CalTeach</a></div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="organisations.html">Organisations</a>
+      <a href="img/Resume.pdf">Resume</a>
+      <a href="mailto:mreschenberg@berkeley.edu"><img src="img/cloud.png" height="25" width="25"> Email</a><br>
+      <a href="https://www.linkedin.com/in/morgan-rae-reschenberg-28b521a7"><img src="img/linkedin.png" height="25" width="25"> LinkedIn </a><br>
+      <a href="https://github.com/MReschenberg"><img src="img/git.png" height="25" width="25"> GitHub </a><br>
+      <a href="https://www.instagram.com/makxine/"><img src="img/insta.png" height="25" width="25"> Instagram </a><br>
+    </div>
 
- <div id="photography"><a href="/projects/photography/" class="barlinks">Photography</a></div>
-{% endblock %}
+    <div id="sidebar">
+      <span style="font-size:30px;cursor:pointer;color:black;padding:10px;" onclick="openNav()">&#9776;</span>
+    </div>
 
-<!-- Javascript Stuff -->
-{% block javascripts %}
-    <script src="{% static 'js/menu.js' %}"></script>
-{% endblock %}
+
+    <div id="maintext">
+        <div id="cs"><a href="/projects/cs/" class="barlinks">Computer Science</a></div>
+		<div id="calteach"><a href="/projects/calteach/" class="barlinks">CalTeach</a></div>
+		<div id="photography"><a href="/projects/photography/" class="barlinks">Photography</a></div>
+        
+        <div id="footer">
+         
+        </div>
+    </div>
+
+
+    <script src="js/menu.js"></script>
+  </body>
+</html>
+
