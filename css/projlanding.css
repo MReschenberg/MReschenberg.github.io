@@ -16,6 +16,7 @@
 	text-align: center;
 	display:table-cell;
 	vertical-align: middle;
+	width: 100%;
 	transition: font-size 1s;
 }
 
