@@ -8,5 +8,34 @@ h5 {
   padding:50px;
 }
 .nav-a {
-  margin-bottom: 20px;
+
+}
+.proj-info {
+  float: left;
+  margin: 20px;
+  padding: 20px;
+  height: 30%;
+  width: 20%;
+  border: 5px double #a76466;
+}
+progress[value] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: whitesmoke;
+  display: block;
+  width: 90%;
+}
+progress::-webkit-progress-value {
+  background: #a76466;
+}
+
+progress::-moz-progress-bar {
+  background: #a76466;
+}
+@media only screen and (max-width: 480px) {
+  .outer {
+    width: 100%;
+  }
 }

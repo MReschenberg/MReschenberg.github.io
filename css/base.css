@@ -21,11 +21,15 @@ body {
 i {
   letter-spacing: 2px;
 }
-.nav, .nav-a, .a-body, i, b, u, a {
+.nav, .nav-a, .a-body, i, b, a {
   color:#3d466e;
-  text-decoration: none; 
+  text-decoration: none;
+}
+u {
+  color:#3d466e;
 }
 .a-body {
+  color: #a76466;
   text-decoration: underline;
 }
 .nav-a {
@@ -40,10 +44,7 @@ i {
   font-weight: bold;
 }
 @media only screen and (max-width: 480px) {
-  .nav-a {
-
-  }
-  .nav {
-
+  .outer {
+    width: 100%;
   }
 }
