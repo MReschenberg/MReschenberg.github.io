@@ -17,10 +17,10 @@
       <a class="nav-a" href="/cs.html">CS Portfolio</a>
     </div>
     <div class="col-3">
-      <a class="nav-a" href="/ed.html">Ed Portfolio</a>
+      <a class="nav-a" href="/ed.html">Teaching Portfolio</a>
     </div>
     <div class="col-3">
-      <a class="nav-a" href="/img/resume.pdf">Resume</a>
+      <a class="nav-a" href="/articles/Resume.pdf">Resume</a>
     </div>
   </div>
 <div class="row">
@@ -30,97 +30,15 @@
     <div class="col-12">
         <center>
         <img src="img/profile.jpg" style="border-radius: 50%; height:150px; border: 4px double #2a1e1a;">
-        <h1>Computer Science Portfolio</h1>
+        <h1>Teaching Portfolio</h1>
         <hr>
     </center>
     </div>
 </div>
   <div class="row">
-    <div class="col-3">
-      <h5><a href="#spring2018">Spring 2018</a></h5>
-      <a class="art" href="#p8">PBI Sample</a><br>
-      <a class="art" href="#p7">Database System</a><br>
-      <a class="art" href="#p6">RSort in Vectorised Assembly</a><br>
-      <h5><a href="#fall2017">Fall 2017</a></h5>
-      <a class="art" href="#p5">Exposing the Great Firewall</a><br>
-      <a class="art" href="#p4">Building a Secure Fileshare</a><br>
-      <a class="art" href="#p3">Algorithmic Approximation</a><br>
-      <h5><a href="#summer2017">Summer 2017</a></h5>
-      <a class="art" href="#p2">Gitlet: Mini Version Control</a><br>
-      <h5><a href="#spring2017">Spring 2017</a></h5>
-      <a class="art" href="#p1">Text Editor</a><br>
-    </div>
-    <div class="col-9">
-      <h2>What I've been working on...</h2>
-      <p>Here you can see some things I've enjoyed working on throughout my CS career. Click on a semester to browse projects from that time period, or click on a project by name to jump right to it. Each project has a short description, notes on the language(s) involved, skills learned, and trials/tribulations therein. Each is also rated to show difficulty, scaffolding, enjoyment, etc. This page will be updated as I have more cool (non-NDA) things to share!</p>
-      <p>Interested in seeing the code behind these projects? Unfortunately, some of the more scaffolded projects are univeristy-sourced and I'm unable to publicly post the code due to concerns over plagerism. My code is hosted in a private repository and I'm happy to share it with recruiters and prospective employers by request; send me an email from your company-affiliated email address.</p>
-
-      <h2><a name="#summer2018">Summer 2018</a></h2>
-
-      <h3><a name="#p9">CSS Containment for Firefox</a></h3>
-      <p>During Summer 2018 I worked as an intern on the Platform Rendering Team at Mozilla in the San Francisco office. Though it took me some time to understand exactly what <a href="https://drafts.csswg.org/css-contain/">CSS Containment</a> was, I eventually got to work on implementing the contain:size and contain:layout variants of containment with another intern on my team. Most of my work was done in C++, though because Mozilla is in the process of transferring their Firefox internals into Rust, I got my feet wet in that language, too.</p>
-
-      <p>Getting the functionalty for containment correct required adding behaviour modifications for several different kinds of frames in the Mozilla code base. Though I came in with a moderate knowledge of CSS and HTML, exploring the DOM tree, learning about rendering and layout, and diving into Gecko were all new things.</p>
-
-      <p>The latter half of my project involved adding optimisations in terms of containment, which got pretty Mozilla-specific. In-and-of itself, containment isn't particularly useful; it acts as a keyword to the browser which enables the rendering engine to make smarter decisions about which elements on the page to prioritise showing (or, laying out) to the user. I was in charge of writing up these optimisations, the results of which I will put here when I'm done</p>
-
-      <p>Looking for the code? This project is open source! You can check out Mozilla's codebase on github at mozilla-central or clone the mercurial repo <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial">here</a>! You can track progress on containment (and subsequent revisions to it) by viewing the bugzilla bugs on <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1463594">contain:size</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1463593">contain:layout</a>.
-      <br><br>
-
-
-      <h2><a name="spring2018">Spring 2018</a></h2>
-
-      <h3><a name="p8">TAGE Branch Predictor</a></h3>
-      <p>During this semester I took Berkeley's combined graduate/upper-div undergraduate Computer Architecture class. CS152 cemented my interest in architecture and systems and gave me the oppotunity to solve real problems with my love of C and Assembly.</p>
-      <p>This branch predictor is a variant of the model developed/discussed by Andre Seznec, which you can read more about in <a href="articles/TAGE.pdf">his article</a>. Though it was developed as part of an assignment for CS152, it was relatively unscaffolded and beyond the scope of the course. The lab related to this project asked students to build "the best branch predictor imaginable", which, within the course itself, was scoped to mean a Branch History Table or a Branch Target Buffer (or some combination therein). The sixth edition of Computer Architecutre by Patterson and Hennessy (our course textbook) mentions TAGE predictors as a possible improvement over the two previously mentioned models and my lab partner and I wanted to see just how much better they could be.</p>
-      <p>To read more about the mechanics of implementation, you can check out my <a href="articles/BranchPredictor_Writeup.pdf">full lab write-up here</a>. This branch predictor won the course competition for fastest, most accurate predictor. Statistics (charted as accurate predictions per # of instructions across several benchmarks) are also available on the write up.</p>
-
-      <br><br>
-
-      <h3><a name="p7">Database System</a></h3>
-      <p>This project was heavily scaffolded, but one of the more satisfying, cumulative projects I've done at Berkeley. As part of CS186 - Databases, I built a fully functioning, optimised database throughout the semester. First, I started with SQL and parsing. Then, I moved on to B Trees (and B+ Trees) where I wrote an index system. After that, I built in joins (partial, inner, outer, equi-joins, etc.). Finally, I transformed incomming queries into relational algebra and performed Selinger optimisation to find the best way to compute the results given the sizes and clustrings of each dataset involved. By the end of the course I had a completely functional database system that could perform both simple and nested, complex queries optimally.</p>
-
-      <br><br>
-
-      <h3><a name="p6">RSort in Vectorised Assembly</a></h3>
-      <p>This project is another open-ended challenge originating from CS152. This lab was meant to get students used to writing vectorised RISC-V code (the vectorised extension to the core instruction set is not yet publicly released at the time of writing, though preliminary documentation for the instructions is available <a herf="articles/RISCVvectors.pdf">here</a>).</p>
-      <p>My lab partner and I chose this extended exercise instead of the traditional matrix-matrix-multiply because implementing RSort challenged us to figure out how do both aggregated and element-wise operations using SIMD instructions. In RSort elements are first counted, and the counts of each unique of element are stored. Typically, a linear scan of the elements is then performed and the count of each type is decreased (or increased up to the found limit) and used as an index to place the elements in the final, resultant vector. This task becomes difficult with vector instructions; if you have two elements of the same type (ex. two 7's) in the chunk you're trying to sort, how can you ensure they don't get placed at the same index? Unlike with typical instructions, you can't step into the chunk, the is the smallest unit that can be manipulated by assembly code.</p>
-      <p>To read more about how we solved this problem, check out <a href="articles/RSort_Writeup.pdf">my lab write-up here</a>.
-      <p>
-      <br><br>
-
-
-      <h2><a name="fall2017">Fall 2017</a></h2>
-
-      <h3><a name="p5">Exposing the Great Firewall</a></h3>
-      <p>desc.</p>
-
-      <br><br>
-
-      <h3><a name="p4">Building a Secure Fileshare</a></h3>
-      <p>desc.</p>
-
-      <br><br>
-
-      <h3><a name="p3">Algorithmic Approximation</a></h3>
-      <p>desc.</p>
-
-      <br><br>
-      <h2><a name="summer2017">Summer 2017</a></h3>
-
-      <h3><a name="p2">Gitlet: Mini Version Control</a></h3>
-      <p>desc.</p>
-
-      <br><br>
-
-      <h2><a name="spring2017">Spring 2017</a></h2>
-
-      <h3><a name="p1">Text Editor</a></h3>
-      <p>desc.</p>
-
-      <br><br>
-
-      <br>
+    <div class="col-12">
+      <h2>Coming soon!</h2>
+      <p>Stay tuned to find out more about my teaching portfolio including my various student-teaching experiences and the time I've spent as an undergraduate student instructor in the EECS department.</p>
     </div>
   </div>
 </div>
