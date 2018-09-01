@@ -20,7 +20,7 @@
       <a class="nav-a" href="/X">Ed Portfolio</a>
     </div>
     <div class="col-3">
-      <a class="nav-a" href="/X">Resume</a>
+      <a class="nav-a" href="/articles/Resume.pdf">Resume</a>
     </div>
   </div>
 <div class="row">
@@ -47,37 +47,27 @@
       <a class="art" href="#p5">Exposing the Great Firewall</a><br>
       <a class="art" href="#p4">Building a Secure Fileshare</a><br>
       <h5><a href="#summer2017">Summer 2017</a></h5>
-      <a class="art" href="#p2">Gitlet: Mini Version Control</a><br>
+      <a class="art" href="#p3">Gitlet: Mini Version Control</a><br>
       <h5><a href="#fall2016">Fall 2016</a></h5>
-      <a class="art" href="#p1">MIPS Pipelined CPU</a><br>
+      <a class="art" href="#p2">MIPS Pipelined CPU</a><br>
       <h5><a href="#spring2016">Spring 2016</a></h5>
-      <a class="art" href="#p0">
+      <a class="art" href="#p1">Text Editor</a>
     </div>
     <div class="col-9">
       <h2>What I've been working on...</h2>
-      <p>Here you can see some things I've enjoyed working on throughout my CS career. Click on a semester to browse projects from that time period, or click on a project by name to jump right to it. Each project has a short description, notes on the language(s) involved, skills learned, and a description of the more difficult/notable parts. Each is also rated to show difficulty, scaffolding, enjoyment, etc. This page will be updated as I have more cool (non-NDA'd) things to share!</p>
+      <p>Here you can see some things I've enjoyed working on throughout my CS career at Berkeley and beyond. Click on a semester to browse projects from that time period, or click on a project by name to jump right to it. Each project has a short description, notes on the language(s) involved, skills learned, and a description of the more difficult/notable parts. Each is also rated to show difficulty, scaffolding, enjoyment, etc. This page will be updated as I have more cool (non-NDA'd) things to share!</p>
       <p>Interested in seeing the code behind these projects? Unfortunately, some projects are university-sourced and I'm unable to publicly post the code due to concerns over plagiarism. That said, I'm happy to share the code (linked in a private repository) with recruiters and prospective employers by request; send me an email from your company-affiliated email address and I'll get back to you as soon as possible.</p>
 
       <h2><a name="#summer2018">Summer 2018</a></h2>
 
       <h3><a name="#p9">CSS Containment for Firefox</a></h3>
-      <div class="proj-info">
-        <u>Difficulty:</u> <progress value="75" max="100"></progress><br>
-        <u>Scaffolding:</u> <progress value="10" max="100"></progress><br>
-        <u>Enjoyment:</u> <progress value="75" max="100"></progress><br>
-        <u>Skills/Languages:</u>
-        <ul>
-          <li>C++</li>
-          <li>Rust</li>
-          <li>Hg (Mercurial)</li>
-          <li>rr/lldb</li>
-        </ul>
-      </div>
+      <h4>C++ • Rust • Hg (Mercurial) • rr • lldb </h4>
+
       <p>The explanation below is a summary of a presentation I gave on CSS Containment at Mozilla SF in July 2018; Interested in watching? Want a more in-depth background of my project? <a class="a-body" href="https://drive.google.com/file/d/1OiTNnhZMcOYXcl888DN740ZsHhM26ifs/view">Check out the presentation here</a>.</p>
 
       <p>During Summer 2018 I worked as an intern on the Platform Rendering Team at Mozilla in the San Francisco office. It took me some time to understand exactly what <a class="a-body" href="https://drafts.csswg.org/css-contain/">CSS Containment</a> was, but I eventually got to work on implementing the contain:size and contain:layout variants of containment with another intern on my team. Most of my work was done in C++, though because Mozilla is in the process of transferring their Firefox internals into Rust, I got my feet wet in that language, too.</p>
 
-      <p>Getting the functionality for containment correct required adding case-specific behaviour modifications for several different kinds of frames in the Mozilla code base. Though I came in with a moderate knowledge of CSS and HTML, exploring the DOM tree, learning about rendering and layout, and diving into Gecko were all things that required a fair amount of spin-up work. I also struggled to get used to working with a remote team, though because of our internal tools (Vidyo, Slack, IRC, etc.), it was no problem after a few weeks in.</p>
+      <p>Getting the functionality for containment correct required adding case-specific behaviour modifications for several different kinds of frames in the Mozilla code base. Though I came in with a moderate knowledge of CSS and HTML, exploring the frame tree, learning about rendering and layout, and diving into Gecko were all things that required a fair amount of spin-up work. I also struggled to get used to working with a remote team, though because of our internal tools (Vidyo, Slack, IRC, etc.), it was no problem after a few weeks in.</p>
 
       <p>Looking for the code? This project is open source! You can check out Mozilla's codebase on github at mozilla-central or clone the mercurial repo <a class="a-body" href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial">here</a>! You can track progress on containment (and subsequent revisions to it) by viewing the bugzilla bugs on <a class="a-body" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1463594">contain:size</a> and <a class="a-body" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1463593">contain:layout</a>.
       <br><br>
@@ -86,29 +76,31 @@
       <h2><a name="spring2018">Spring 2018</a></h2>
 
       <h3><a name="p8">TAGE Branch Predictor</a></h3>
+      <h4>C++ • Chisel (Scala)</h4>
       <p>During this semester I took Berkeley's combined graduate/upper-div undergraduate Computer Architecture class. CS152 cemented my interest in architecture and systems and gave me the opportunity to solve real problems both of C and Assembly, which I really enjoyed.</p>
-      <p>This branch predictor is a variant of the model developed/discussed by Andre Seznec, which you can read more about in <a class="a-body" href="articles/TAGE.pdf">his article</a>. Though it was developed as part of an assignment for CS152, it was relatively unscaffolded and (content-wise) beyond the scope of the course. The lab related to this project asked students to build "the best branch predictor imaginable", which, within the course itself, was scoped to mean a Branch History Table or a Branch Target Buffer (or some combination thereof). The sixth edition of Computer Architecture by Patterson and Hennessy (our course textbook) mentions TAGE predictors as a possible improvement over the two previously mentioned models and my lab partner and I wanted to see just how much better they could be.</p>
-      <p>To read more about the mechanics of implementation, you can check out my <a class="a-body" href="articles/BranchPredictor_Writeup.pdf">full lab write-up here</a>. This branch predictor won the course competition for fastest, most accurate predictor. Statistics (charted as accurate predictions per # of instructions across several benchmarks) are also available on the write up.</p>
+      <p>This branch predictor is a variant of the model developed/discussed by Andre Seznec, which you can read more about in <a class="a-body" href="articles/TAGE.pdf">his article</a>. Though it was developed as part of an assignment for CS152, it was relatively unscaffolded and individually driven. The lab related to this project asked students to build "the best branch predictor imaginable", which, with respect to what we'd covered in the course, meant a Branch History Table or a Branch Target Buffer (or some combination thereof). The sixth edition of Computer Architecture by Patterson and Hennessy (our course textbook) mentioned TAGE predictors as a possible improvement over the two previously mentioned models, and my lab partner and I wanted to see just how much better they could be.</p>
+      <p>To read more about the mechanics of implementation, you can check out my <a class="a-body" href="articles/BranchPredictor_Writeup.pdf">lab write-up here</a>. This branch predictor won the course competition for fastest, most accurate predictor. Statistics (charted as accurate predictions per # of instructions across several benchmarks) are also available on the write up. The predictor was written in C++ and tested in a simulated (Chisel-based) Out-of-Order machine.</p>
 
       <br><br>
 
       <h3><a name="p6">RSort in Vectorised Assembly</a></h3>
+      <h4>RISC-V Vector Extension</h4>
       <p>This project is another open-ended challenge originating from CS152. This lab was meant to get students used to writing vectorised RISC-V code (the vectorised extension to the core instruction set is not yet publicly released at the time of writing, though preliminary documentation for the instructions is available <a class="a-body" herf="articles/RISCVvectors.pdf">here</a>).</p>
-      <p>My lab partner and I chose this extended exercise instead of the traditional matrix-matrix-multiply because implementing RSort challenged us to figure out how do both aggregated and element-wise operations using SIMD instructions. In RSort elements are first counted, and the counts of each unique of element are stored. Typically, a linear scan of the elements is then performed and the count of each type is decreased (or increased up to the found limit) and used as an index to place the elements in the final, resultant vector. This task becomes difficult with vector instructions; if you have two elements of the same type (ex. two 7's) in the chunk you're trying to sort, how can you ensure they don't get placed at the same index? Unlike with typical instructions, you can't step into the chunk, the is the smallest unit that can be manipulated by assembly code.</p>
+      <p>My lab partner and I chose this extended exercise instead of the traditional matrix-matrix-multiply because implementing RSort required us to figure out how do both aggregated and element-wise operations using SIMD instructions. In RSort elements are first counted, and the counts of each unique of element are stored. Typically, a linear scan of the elements is then performed and the count of each type is decreased (or increased up to the found limit) and used as an index to place the elements in the final, resultant vector. This task becomes difficult with vector instructions; if you have two elements of the same type (ex. two 7's) in the chunk you're trying to sort, how can you ensure they don't get placed at the same index? Unlike with typical instructions, you can't step into the chunk, the is the smallest unit that can be manipulated by assembly code.</p>
       <p>To read more about how we solved this problem, check out <a class="a-body" href="articles/RSort_Writeup.pdf">my lab write-up here</a>.
 
       <br><br>
 
       <h3><a name="p7">Database System</a></h3>
-      <p>This project was heavily scaffolded, but one of the more satisfying, cumulative projects I've done at Berkeley. As part of CS186 - Databases, I built a fully functioning, optimised database throughout the semester. First, I started with SQL and parsing. Then, I moved on to B Trees (and B+ Trees) where I wrote an index system. After that, I built in logic for joins (partial, inner, outer, equi-joins, etc.). Finally, I transformed incoming queries into relational algebra and performed Selinger optimisation to find the best way to compute the query results given the sizes and clusterings of each dataset involved. By the end of the course I had a completely functional database system that could perform both simple and nested, complex queries optimally.</p>
-      <p>Source code for this project can be viewed at request by emailing me for the github link. If you'd like to view the project spec, it is available (spread out over the semester) at the archived CS186 website.</p>
+      <p>This project was heavily scaffolded, but one of the more satisfying, cumulative projects I've done at Berkeley. As part of CS186 - Databases, I built a fully functional, optimised database throughout the semester. First, I started building a parser for SQL statements. Then, I moved on to B Trees (and B+ Trees) where I wrote an index system. After that, I built in logic for joins (partial, inner, outer, equi-joins, etc.). Finally, I transformed incoming queries into relational algebra and performed Selinger optimisation to find the best way to compute the query results given the sizes and clusterings of each dataset involved. By the end of the course I had a database system that could perform both simple and nested/corrolated queries optimally.</p>
+      <p>Source code for this project can be viewed at request by emailing me for the github link. If you'd like to view the project spec, it is available (spread out over the semester) at the archived CS186 website for this semester.</p>
 
       <br><br>
 
       <h2><a name="fall2017">Fall 2017</a></h2>
 
       <h3><a name="p5">Exposing the Great Firewall</a></h3>
-      <p>This was a three-part project I worked on for my cybersecurity class. First, I proved the existence of the Great Firewall of China by writing a 'listener' program that created pacp files and observed illegal Chinese requests (e.g. to Google) received replies even though the TCP connection appeared terminated from the client's perspective. Second, I wrote a trace-route program to determine how far away the firewall appeared to be from my access point. Last, I used the position found from trace-route to create garbage packets with a TTL that would reach the firewall (and obscure the illegal request) but die before reaching the host. I was then able to evade the firewall and send/receive packets that were meant to be blocked by the Great Firewall.</p>
+      <p>This was a three-part project I worked on for my computer security class. First, I proved the existence of the Great Firewall of China by writing a 'listener' program that created pacp files. The program observed illegal Chinese requests (e.g. to Google) received replies even though the TCP connection appeared terminated from the client's perspective. Second, I wrote a trace-route program to determine how far away the firewall appeared to be from my access point by writing raw packets with varying TTL's and listening for RST's. Last, I used the position found from trace-route to create garbage packets with a TTL that would reach the firewall (and obscure the illegal request) but die before reaching the host. By doing this, the host inside China would get the complete request (eg. for google.com), but the request would be garbled and undetected by the firewall.</p>
 
       <br><br>
 
@@ -118,12 +110,19 @@
       <br><br>
       <h2><a name="summer2017">Summer 2017</a></h3>
 
-      <h3><a name="p2">Gitlet: Mini Version Control</a></h3>
-      <p>desc.</p>
+      <h3><a name="p3">Gitlet: Mini Version Control</a></h3>
+      <p></p>
 
       <br><br>
 
-      <h2><a name="spring2017">Spring 2017</a></h2>
+      <h2><a name="fall2016">Fall 2016</a></h3>
+
+      <h3><a name="p2">MIPS Pipelined CPU</a></h3>
+      <p></p>
+
+      <br><br>
+
+      <h2><a name="spring2016">Spring 2016</a></h2>
 
       <h3><a name="p1">Text Editor</a></h3>
       <p>desc.</p>
