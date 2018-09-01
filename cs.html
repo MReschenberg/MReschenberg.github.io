@@ -50,8 +50,6 @@
       <a class="art" href="#p3">Gitlet: Mini Version Control</a><br>
       <h5><a href="#fall2016">Fall 2016</a></h5>
       <a class="art" href="#p2">MIPS Pipelined CPU</a><br>
-      <h5><a href="#spring2016">Spring 2016</a></h5>
-      <a class="art" href="#p1">Text Editor</a>
     </div>
     <div class="col-9">
       <h2>What I've been working on...</h2>
@@ -70,7 +68,6 @@
       <p>Getting the functionality for containment correct required adding case-specific behaviour modifications for several different kinds of frames in the Mozilla code base. Though I came in with a moderate knowledge of CSS and HTML, exploring the frame tree, learning about rendering and layout, and diving into Gecko were all things that required a fair amount of spin-up work. I also struggled to get used to working with a remote team, though because of our internal tools (Vidyo, Slack, IRC, etc.), it was no problem after a few weeks in.</p>
 
       <p>Looking for the code? This project is open source! You can check out Mozilla's codebase on github at mozilla-central or clone the mercurial repo <a class="a-body" href="https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial">here</a>! You can track progress on containment (and subsequent revisions to it) by viewing the bugzilla bugs on <a class="a-body" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1463594">contain:size</a> and <a class="a-body" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1463593">contain:layout</a>.
-      <br><br>
 
 
       <h2><a name="spring2018">Spring 2018</a></h2>
@@ -81,7 +78,6 @@
       <p>This branch predictor is a variant of the model developed/discussed by Andre Seznec, which you can read more about in <a class="a-body" href="articles/TAGE.pdf">his article</a>. Though it was developed as part of an assignment for CS152, it was relatively unscaffolded and individually driven. The lab related to this project asked students to build "the best branch predictor imaginable", which, with respect to what we'd covered in the course, meant a Branch History Table or a Branch Target Buffer (or some combination thereof). The sixth edition of Computer Architecture by Patterson and Hennessy (our course textbook) mentioned TAGE predictors as a possible improvement over the two previously mentioned models, and my lab partner and I wanted to see just how much better they could be.</p>
       <p>To read more about the mechanics of implementation, you can check out my <a class="a-body" href="articles/BranchPredictor_Writeup.pdf">lab write-up here</a>. This branch predictor won the course competition for fastest, most accurate predictor. Statistics (charted as accurate predictions per # of instructions across several benchmarks) are also available on the write up. The predictor was written in C++ and tested in a simulated (Chisel-based) Out-of-Order machine.</p>
 
-      <br><br>
 
       <h3><a name="p6">RSort in Vectorised Assembly</a></h3>
       <h4>RISC-V Vector Extension</h4>
@@ -89,45 +85,39 @@
       <p>My lab partner and I chose this extended exercise instead of the traditional matrix-matrix-multiply because implementing RSort required us to figure out how do both aggregated and element-wise operations using SIMD instructions. In RSort elements are first counted, and the counts of each unique of element are stored. Typically, a linear scan of the elements is then performed and the count of each type is decreased (or increased up to the found limit) and used as an index to place the elements in the final, resultant vector. This task becomes difficult with vector instructions; if you have two elements of the same type (ex. two 7's) in the chunk you're trying to sort, how can you ensure they don't get placed at the same index? Unlike with typical instructions, you can't step into the chunk, the is the smallest unit that can be manipulated by assembly code.</p>
       <p>To read more about how we solved this problem, check out <a class="a-body" href="articles/RSort_Writeup.pdf">my lab write-up here</a>.
 
-      <br><br>
-
       <h3><a name="p7">Database System</a></h3>
+      <h4>Java • Selinger Optimisation • SQL • Relational Algebra</h4>
       <p>This project was heavily scaffolded, but one of the more satisfying, cumulative projects I've done at Berkeley. As part of CS186 - Databases, I built a fully functional, optimised database throughout the semester. First, I started building a parser for SQL statements. Then, I moved on to B Trees (and B+ Trees) where I wrote an index system. After that, I built in logic for joins (partial, inner, outer, equi-joins, etc.). Finally, I transformed incoming queries into relational algebra and performed Selinger optimisation to find the best way to compute the query results given the sizes and clusterings of each dataset involved. By the end of the course I had a database system that could perform both simple and nested/corrolated queries optimally.</p>
       <p>Source code for this project can be viewed at request by emailing me for the github link. If you'd like to view the project spec, it is available (spread out over the semester) at the archived CS186 website for this semester.</p>
-
-      <br><br>
 
       <h2><a name="fall2017">Fall 2017</a></h2>
 
       <h3><a name="p5">Exposing the Great Firewall</a></h3>
+      <h4>Python • scapy • TCP • dig • traceroute</h4>
       <p>This was a three-part project I worked on for my computer security class. First, I proved the existence of the Great Firewall of China by writing a 'listener' program that created pacp files. The program observed illegal Chinese requests (e.g. to Google) received replies even though the TCP connection appeared terminated from the client's perspective. Second, I wrote a trace-route program to determine how far away the firewall appeared to be from my access point by writing raw packets with varying TTL's and listening for RST's. Last, I used the position found from trace-route to create garbage packets with a TTL that would reach the firewall (and obscure the illegal request) but die before reaching the host. By doing this, the host inside China would get the complete request (eg. for google.com), but the request would be garbled and undetected by the firewall.</p>
 
-      <br><br>
 
       <h3><a name="p4">Building a Secure Fileshare</a></h3>
+      <h4>Golang • RSA • HMAC • PBKDF</h4>
       <p>This was a small foray into Golang also encouraged by my cybersecurity class. In pairs, we were tasked with building a 'better, and more secure' Google Drive. Under the assumption that the system itself was dishonest -and- that we would be pursued by active attackers, we had to come up with cryptographic protocols that would allow sharing and editing of documents by multiple users without impersonation, data leakage, or loss of information.</p>
-      <p>You can view the design document for this project (and associated code) by request. Send me an email!</p>
-      <br><br>
+      <p>You can view the design document for this project (and associated code) by request. Send me an email! The project specifications are available <a class="a-body" href="https://inst.eecs.berkeley.edu/~cs161/fa17/projects/project2-problems.pdf">here</a>.</p>
+      
+
       <h2><a name="summer2017">Summer 2017</a></h3>
 
       <h3><a name="p3">Gitlet: Mini Version Control</a></h3>
-      <p></p>
+      <h4>Java • git</h4>
+      <p>When I started CS at Berkeley, I was lucky enough to simultaneously get involved with another group on campus working on web development. Before I learned how to use git for CS projects, I learned about it in terms of website hosting (github pages). By the time my CS courses got around to introducing it, I was already used to branches, remote/local repos, cloning, and re-basing/merging. For the summer offering of CS61B(L), our main project was to develop a small git-like version control system supporting adding, committing, change-detection, branching, merging, and merge-conflict detection.</p>
+      <p>This was the first software enginering project I felt confident in, and I think a lot of that confidence stemmed from the fact that I was familiar with the project's goals (I'd used git before), and was interested in picking apart the system and building it on my own. This project was also easy to modularlise and build in sections, which gave me an opportunity to gain experience with unit testing as well. Overall, I really enjoyed working on this project. After the not-so-great experience I had (attempting) building a java-based text editor in Spring 2016, this revived my interest in software development and data structures, and it also gave me an opportunity to reflect on my growth as a computer scientist and my continued ability to learn and improve.</p>
 
-      <br><br>
 
       <h2><a name="fall2016">Fall 2016</a></h3>
 
       <h3><a name="p2">MIPS Pipelined CPU</a></h3>
-      <p></p>
+      <h4>MIPS • Logisim</h4>
+      <p>CS61C (Computer Architecutre and Machine Structures) was the first class at Cal in which I felt truly "in my element". I'd go on to later take CS152 (Computer Architecture Design) and teach CS61C myself, but while I was a student in the class, I took every opportunity I could to immerse myself in the projects and absorb the material. This project, developing a pipelined CPU to run MIPS machine code, was one of the later projects in the course, and gave students an opportunity to explore how hardware and software interact. Prior to this, we'd written a Linker/Loader, and Assembler to convert compiled C code into MIPS. The CPU was the final step in that process, the goal being that the code we'd run through the CALL process could then be simulated. This CPU was constructed in Logisim and had the standard five components: Instruction Fetch, Decode/Read RegFile, ALU, Write RegFile/Memory. It was pipelined between IF and the latter four stages. </p>
+      <p>As an instructor, I later went on to modify this project for RISC-V, as CS61C transitioned away from MIPS in early 2017. The schematic X.circ files are available for viewing by request.</p>
 
-      <br><br>
-
-      <h2><a name="spring2016">Spring 2016</a></h2>
-
-      <h3><a name="p1">Text Editor</a></h3>
-      <p>desc.</p>
-
-      <br><br>
 
       <br>
     </div>
