@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Web Palette Viewer</title>
+  <script>
+    var idList = ["Canvas", "Canvastext", "Buttontext", "Buttonface", "Selecteditem", "Selecteditemtext", "Linktext", "Visitedtext"];
+
+      function createElements() {
+        idList.forEach((id) => {
+          var newRow = document.createElement("tr");
+          document.getElementById("t").appendChild(newRow);
+          var labelCell = document.createElement("td");
+          newRow.appendChild(labelCell);
+          var label = document.createElement("label");
+          label.id = id;
+          label.innerHTML = id;
+          label.for = id.concat("input");
+          labelCell.appendChild(label);
+
+          var colorCell = document.createElement("td");
+          newRow.appendChild(colorCell);
+          var colorInput = document.createElement("input");
+          colorInput.type = "color";
+          colorInput.id = id.concat("input");
+          colorCell.appendChild(colorInput);
+        });
+        setColors();
+      }
+
+      function byteToHex(num) {
+        // Turns a number (0-255) into a 2-character hex number (00-ff)
+        return ('0' + num.toString(16)).slice(-2);
+      }
+
+      function setColors() {
+        idList.forEach((id) => {
+          var elm = document.getElementById(id);
+          elm.style.color = id;
+          var rgbVal = window.getComputedStyle(elm).getPropertyValue("color");
+          var rgba = rgbVal.slice(4, -1).split(", ").map(e => parseInt(e));
+          var hexValue = [0, 1, 2].map(
+            function (idx) { return byteToHex(rgba[idx]); }
+          ).join('');
+          console.log(id + ": #" + hexValue);
+          document.getElementById(id.concat("input")).value = "#".concat(hexValue);
+          elm.style.color = "Canvastext";
+        })
+      }
+
+      function setScheme() {
+        if (document.getElementById("color-scheme-light").checked) {
+          document.body.style.colorScheme = "light";
+        } else if (document.getElementById("color-scheme-dark").checked) {
+          document.body.style.colorScheme = "dark";
+        } else {
+          document.body.style.colorScheme = "light dark";
+        }
+      }
+
+      window.onload = createElements;
+      const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
+      const HCMpref = window.matchMedia("(prefers-contrast: more)");
+      darkModePreference.addEventListener("change", e => setColors());
+      HCMpref.addEventListener("change", e => setColors());
+
+  </script>
+  <link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible' rel='stylesheet'>
+</head>
+<style>
+  body {
+    font-family: 'Atkinson Hyperlegible';
+    background: Canvas;
+    color: Canvastext;
+    color-scheme: light dark;
+    font-size: 2vw;
+  }
+  table {
+    margin: auto;
+  }
+
+  table, td, fieldset {
+    padding: 10px;
+  }
+
+  th {
+    font-size: 2.5vw;
+    padding: 5px;
+  }
+
+  fieldset {
+    display:inline;
+  }
+
+  table, fieldset {
+    border: Canvastext solid 3px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+  }
+
+  p {
+    max-width: 70%;
+    text-align: justify;
+  }
+</style>
+<body>
+  <center>
+    <h1>Web Palette Viewer</h1>
+    <p>When "Auto" is selected, dynamic changes in dark / light / high contrast mode should be reflected in the palette below (provided they're able to
+    be observed by `prefers-contrast` and `prefers-color-scheme`). If changes are not automatically reflected, please refresh the page. To test Light or Dark palettes without switching your OS theme, select Light or Dark below. </p>
+
+    <fieldset class="toggle-group" id="colorScheme">
+      <label>
+        <input type="radio" name="color-scheme" id="color-scheme-light" value="0" onchange="setScheme()">
+        Light
+      </label>
+      <label>
+        <input type="radio" name="color-scheme" value="auto" checked onchange="setScheme()">
+        Auto
+      </label>
+      <label>
+        <input type="radio" name="color-scheme" id="color-scheme-dark" value="1" onchange="setScheme()">
+        Dark
+      </label>
+    </fieldset>
+  </center>
+  <br>
+  <table id="t">
+    <tr><th>Color Name</th><th>Swatch</th></tr>
+  </table>
+</body>
+</html>
