@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sample Website</title>
+</head>
+<link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible' rel='stylesheet'>
+<style>
+  :root {
+    /* General */
+    --in-content-background: #202124;
+    --in-content-color: #cccccc;
+    --in-content-border-color: transparent;
+    --in-content-border-size: 0;
+    --in-content-table-background: #303134;
+    /* Note */
+    --in-content-note-background: gold;
+    --in-content-note-color: var(--in-content-table-background);
+    --in-content-note-opacity: .7;
+    /* General Controls */
+    --in-content-control-background: gray;
+    --in-content-control-color: var(--in-content-color);
+    --in-content-control-border-size: var(--in-content-border-size);
+    --in-content-control-border-color: var(--in-content-border-color);
+    /* Destructive Button */
+    --in-content-destructive-button-background: tomato;
+    --in-content-destructive-button-color: var(--in-content-table-background);
+  }
+
+  @media (prefers-con1trast) and (not (forced-colors)) {
+    :root {
+      /* General */
+      --in-content-color: white;
+      /* Note */
+      --in-content-note-color: black;
+      --in-content-note-opacity: 1;
+      /* General Controls */
+      --in-content-control-background: color-mix(in srgb, gray, lightgray);
+      --in-content-control-color: black;
+      --in-content-control-border-size: 1px;
+      --in-content-control-border-color: gray;
+      /* Destructive Button */
+      --in-content-destructive-button-background: red;
+      --in-content-destructive-button-color: white;
+    }
+  }
+
+  @media (forced-colors) {
+    :root {
+      /* General */
+      --in-content-background: Canvas;
+      --in-content-color: Canvastext;
+      --in-content-border-color: var(--in-content-color);
+      --in-content-border-size: 1px;
+      --in-content-table-background: var(--in-content-background);
+      /* Note */
+      --in-content-note-background: var(--in-content-background);
+      --in-content-note-color: var(--in-content-color);
+      --in-content-note-opacity: 1;
+      /* General Controls */
+      --in-content-control-background: Buttonface;
+      --in-content-control-color: Buttontext;
+      --in-content-control-border-color: Buttontext;
+      /* Destructive Button */
+      --in-content-destructive-button-background: var(--in-content-control-background);
+      --in-content-destructive-button-color: var(--in-content-control-color);
+    }
+  }
+
+  body {
+    background: var(--in-content-background);
+    color: var(--in-content-color);
+  }
+
+  table {
+    background: var(--in-content-table-background);
+  }
+
+  table,
+  form,
+  #note {
+    border: var(--in-content-border-size) solid var(--in-content-border-color);
+  }
+
+  #note {
+    background: var(--in-content-note-background);
+    opacity: var(--in-content-note-opacity);
+    color: var(--in-content-note-color);
+  }
+
+  button,
+  input {
+    background: var(--in-content-control-background);
+    border: var(--in-content-control-border-size) solid var(--in-content-control-border-color);
+    color: var(--in-content-control-color);
+  }
+
+  #clearbtn {
+    background: var(--in-content-destructive-button-background);
+    color: var(--in-content-destructive-button-color);
+  }
+
+  table,
+  td,
+  form,
+  #note {
+    padding: 15px;
+  }
+
+  button,
+  input,
+  table,
+  form,
+  #note {
+    border-radius: 5px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  body {
+    font-family: 'Atkinson Hyperlegible';
+    font-size: 16px;
+    color-scheme: dark;
+  }
+</style>
+
+<body>
+  <table align="center">
+    <tr>
+      <td style="border-right: var(--in-content-border-size) solid var(--in-content-border-color);">
+        <h2>About me</h2>
+        <img style="border-radius: 50%" src="http://placekitten.com/100/100">
+        <h3>My favourite things</h3>
+        <ul>
+          <li> Cherry soda</li>
+          <li> Ice cream</li>
+          <li> Chocolate chip cookies</li>
+        </ul>
+      </td>
+      <td colspan="4">
+        <h1>My Website</h1>
+        Welcome to my website! <br><br>
+        <div id="note">
+          Note: This page is under construction!
+        </div>
+        <br><br>
+        You can <a href="thiswebsite.com">visit my homepage</a> or <a href="https://google.com">search the web</a>.
+        <br>
+        You can also subscribe to my newsletter by using this form:<br><br>
+        <form>
+          <center>
+            <label for="email">Email address</label> <input type="email" id="email"><br>
+            <input type="checkbox" id="chkbox" checked> <label for="chkbox">I agree to the rules</label><br>
+            <button type="submit">Submit</button> <button id="clearbtn">Clear Form</button>
+          </center>
+        </form>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
