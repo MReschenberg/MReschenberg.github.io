@@ -3,7 +3,7 @@
 Created using JS Bin
 http://jsbin.com
 
-Copyright (c) 2024 by morgan (http://jsbin.com/xusurasaki/1/edit)
+Copyright (c) 2024 by Morgan (http://jsbin.com/xusurasaki/3/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
 -->
@@ -14,53 +14,133 @@ Released under the MIT license: http://jsbin.mit-license.org
   <meta name="viewport" content="width=device-width">
   <title>Media Query Checker</title>
 <style id="jsbin-css">
-#macosIC, #winHCM, #both, #notMacosIC, #notWinHCM, #neither {
-  display:none;
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+@media (not ((forced-colors) or (prefers-contrast))) {
+  :root {
+    --card-background: Cavnas;
+    --card-foreground: CanvasText;
+    --card-border-on: green;
+    --card-border-off: tomato;
+  }
 }
 
-@media ((prefers-contrast) and (not (forced-colors))) {
+@media (prefers-contrast) and (not (forced-colors)) {
+  :root {
+    --card-background: Cavnas;
+    --card-foreground: CanvasText;
+    --card-border-on: darkgreen;
+    --card-border-off: red;
+  }
+}
+@media (forced-colors) {
+  :root {
+    --card-background: Cavnas;
+    --card-foreground: CanvasText;
+    --card-border-on: SelectedItem;
+    --card-border-off: GrayText;
+  }
+}
+body {
+  font-family: Atkinson Hyperlegible;
+}
+
+#macosIC, #winHCM, #both, #notMacosIC, #notWinHCM, #neither {
+  color: GrayText;
+  opacity: .5;
+  border: 3px dotted var(--card-border-off);
+}
+
+.card {
+  background: var(--card-background);
+  color: var(--card-foreground);
+  border-radius: 10px;
+  padding: 10px;
+  margin: auto auto 10px auto;
+  max-width: 50%;
+}
+.card::before {
+  content:"❌ "
+}
+
+@media (prefers-contrast) and (not (forced-colors)) {
   #macosIC {
-    display:revert;
+    color:revert;
+    opacity:revert;
+    border: 3px solid var(--card-border-on);
+  }
+  #macosIC.card::before {
+    content:"✅ "
   }
 }
 
 @media (forced-colors) {
   #winHCM {
-    display:revert;
+    color:revert;
+    opacity:revert;
+    border: 3px solid var(--card-border-on);
+  }
+  #winHCM.card::before {
+    content:"✅ "
   }
 }
 
 @media (prefers-contrast) {
   #both {
-    display:revert;
+    color:revert;
+    opacity:revert;
+    border: 3px solid var(--card-border-on);
+  }
+  #both.card::before {
+    content:"✅ "
   }
 }
 
-@media ((forced-colors) or (not (prefers-contrast))) {
+@media (forced-colors) or (not (prefers-contrast)) {
   #notMacosIC {
-    display:revert;
+    color:revert;
+    opacity:revert;
+    border: 3px solid var(--card-border-on);
+  }
+  #notMacosIC.card::before {
+    content:"✅ "
   }
 }
 
 @media (not (forced-colors)) {
   #notWinHCM {
-    display:revert;
+    color:revert;
+    opacity:revert;
+    border: 3px solid var(--card-border-on);
+  }
+  #notWinHCM.card::before {
+    content:"✅ "
   }
 }
 
 @media (not ((forced-colors) or (prefers-contrast))) {
   #neither {
-    display:revert;
+    color:revert;
+    opacity:revert;
+    border: 3px solid var(--card-border-on);
+  }
+  #neither.card::before {
+    content:"✅ "
   }
 }
 </style>
 </head>
 <body>
-  <div id="macosIC">You are running macOS IC</div>
-  <div id="winHCM">You are running Windows HCM</div>
-  <div id="both">You are running either Windows HCM or macOS IC</div>
-  <div id="notMacosIC">You are running anything that isn't macOS IC</div>
-  <div id="notWinHCM">You are running anything that isn't Windows HCM</div>
-  <div id="neither">You are running anything that isn't Windows HCM or macOS IC</div>
+  <div id="macosIC" class="card">You are running <u>Increase Contrast</u>, which can be targeted with: <br><br>
+    <code>@media (prefers-contrast) and (not (forced-colors)) { ... }</code> </div>
+  <div id="winHCM" class="card">You are running <u>Windows HCM</u> which can be targeted with:<br><br>
+    <code>@media (forced-colors) { ... } </code></div>
+  <div id="both" class="card">You are running either <u>Windows HCM</u> or <u>Increase Contrast</u> which can be targeted with:<br><br>
+    <code>@media (prefers-contrast) { ... }</code></div>
+  <div id="notMacosIC" class="card">You are running anything that <b>isn't</b> <u>Increase Contrast</u> which can be targeted with:<br><br>
+    <code>@media (forced-colors) or (not (prefers-contrast)) { ... }</code></div>
+  <div id="notWinHCM" class="card">You are running anything that <b>isn't</b> <u>Windows HCM</u> which can be targeted with:<br><br>
+    <code>@media (not (forced-colors)) { ... }</code></div>
+  <div id="neither" class="card">You are running anything that <b>isn't</b> <u>Windows HCM</u> or <u>Increase Contrast</u> which can be targeted with:<br><br>
+    <code>@media (not ((forced-colors) or (prefers-contrast))) { ... }</code></div>
 </body>
 </html>
