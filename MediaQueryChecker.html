@@ -3,11 +3,11 @@
 Created using JS Bin
 http://jsbin.com
 
-Copyright (c) 2024 by Morgan (http://jsbin.com/xusurasaki/3/edit)
+Copyright (c) 2024 by Morgan (http://jsbin.com/yisipimeli/1/edit)
 
 Released under the MIT license: http://jsbin.mit-license.org
 -->
-<meta name="robots" content="noindex">
+<meta name="robots" content="noindex" color-scheme="dark">
 <html>
 <head>
   <meta charset="utf-8">
@@ -15,38 +15,62 @@ Released under the MIT license: http://jsbin.mit-license.org
   <title>Media Query Checker</title>
 <style id="jsbin-css">
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+
+:root {
+  background: Canvas;
+  color: CanvasText;
+  font-family: Atkinson Hyperlegible;
+  color-scheme: light dark;
+  font-size: 16px;
+  --card-background: Cavnas;
+  --card-foreground: CanvasText;
+}
+
+/* Non-HCM, non-IC code */
 @media (not ((forced-colors) or (prefers-contrast))) {
-  :root {
-    --card-background: Cavnas;
-    --card-foreground: CanvasText;
-    --card-border-on: green;
-    --card-border-off: tomato;
+  @media (prefers-color-scheme: light) {
+    :root {
+      --card-border-on: green;
+      --card-border-off: tomato;
+      --disabled-color: greytext;
+    }
+  }
+}
+/* IC but not HCM code */
+@media (prefers-contrast) and (not (forced-colors)) {
+  @media (prefers-color-scheme: light) {
+    :root {
+      --card-border-on: darkgreen;
+      --card-border-off: red;
+      --disabled-color: GrayText;
+    }
   }
 }
 
-@media (prefers-contrast) and (not (forced-colors)) {
-  :root {
-    --card-background: Cavnas;
-    --card-foreground: CanvasText;
-    --card-border-on: darkgreen;
-    --card-border-off: red;
-  }
-}
+/* HCM Code */
 @media (forced-colors) {
   :root {
-    --card-background: Cavnas;
-    --card-foreground: CanvasText;
     --card-border-on: SelectedItem;
     --card-border-off: GrayText;
+    --disabled-color: GrayText;
   }
 }
-body {
-  font-family: Atkinson Hyperlegible;
+
+/* IC or non-IC but not HCM code */
+@media (not (forced-colors)) {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --card-border-on: lightgreen;
+      --card-border-off: salmon;
+      --disabled-color: white;
+    }
+  }
 }
 
+
 #macosIC, #winHCM, #both, #notMacosIC, #notWinHCM, #neither {
-  color: GrayText;
-  opacity: .5;
+  color: var(--disabled-color);
+  opacity: .65;
   border: 3px dotted var(--card-border-off);
 }
 
