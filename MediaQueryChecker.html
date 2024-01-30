@@ -36,7 +36,7 @@ Released under the MIT license: http://jsbin.mit-license.org
   }
 }
 
-@media ((not (prefers-contrast)) and (forced-colors)) {
+@media ((forced-colors) or (not (prefers-contrast))) {
   #notMacosIC {
     display:revert;
   }
