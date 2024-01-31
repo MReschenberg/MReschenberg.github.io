@@ -85,15 +85,22 @@ Released under the MIT license: http://jsbin.mit-license.org
 .card::before {
   content:"❌ "
 }
+.run::before {
+  content:" not "
+}
 
 @media (prefers-contrast) and (not (forced-colors)) {
   #macosIC {
     color:revert;
     opacity:revert;
     border: 3px solid var(--card-border-on);
+  
+    .run::before {
+      content: "";
+    }
   }
   #macosIC.card::before {
-    content:"✅ "
+    content:"✅ ";
   }
 }
 
@@ -102,20 +109,29 @@ Released under the MIT license: http://jsbin.mit-license.org
     color:revert;
     opacity:revert;
     border: 3px solid var(--card-border-on);
+  
+    .run::before {
+      content: "";
+    }
   }
   #winHCM.card::before {
-    content:"✅ "
+    content:"✅ ";
   }
 }
+  
 
 @media (prefers-contrast) {
   #both {
     color:revert;
     opacity:revert;
     border: 3px solid var(--card-border-on);
+  
+    .run::before {
+      content: "";
+    }
   }
   #both.card::before {
-    content:"✅ "
+    content:"✅ ";
   }
 }
 
@@ -124,10 +140,15 @@ Released under the MIT license: http://jsbin.mit-license.org
     color:revert;
     opacity:revert;
     border: 3px solid var(--card-border-on);
+  
+    .run::before {
+      content: "";
+    }
   }
   #notMacosIC.card::before {
-    content:"✅ "
+    content:"✅ ";
   }
+
 }
 
 @media (not (forced-colors)) {
@@ -135,9 +156,13 @@ Released under the MIT license: http://jsbin.mit-license.org
     color:revert;
     opacity:revert;
     border: 3px solid var(--card-border-on);
+  
+    .run::before {
+      content: "";
+    }
   }
   #notWinHCM.card::before {
-    content:"✅ "
+    content:"✅ ";
   }
 }
 
@@ -146,25 +171,29 @@ Released under the MIT license: http://jsbin.mit-license.org
     color:revert;
     opacity:revert;
     border: 3px solid var(--card-border-on);
+  
+    .run::before {
+      content: "";
+    }
   }
   #neither.card::before {
-    content:"✅ "
+    content:"✅ ";
   }
 }
 </style>
 </head>
 <body>
-  <div id="macosIC" class="card">You are running <u>Increase Contrast</u>, which can be targeted with: <br><br>
+  <div id="macosIC" class="card">You are <span class="run">running</span> <u>Increase Contrast</u>, which can be targeted with: <br><br>
     <code>@media (prefers-contrast) and (not (forced-colors)) { ... }</code> </div>
-  <div id="winHCM" class="card">You are running <u>Windows HCM</u> which can be targeted with:<br><br>
+  <div id="winHCM" class="card">You are <span class="run">running</span> <u>Windows HCM</u> which can be targeted with:<br><br>
     <code>@media (forced-colors) { ... } </code></div>
-  <div id="both" class="card">You are running either <u>Windows HCM</u> or <u>Increase Contrast</u> which can be targeted with:<br><br>
+  <div id="both" class="card">You are <span class="run">running</span> either <u>Windows HCM</u> or <u>Increase Contrast</u> which can be targeted with:<br><br>
     <code>@media (prefers-contrast) { ... }</code></div>
-  <div id="notMacosIC" class="card">You are running anything that <b>isn't</b> <u>Increase Contrast</u> which can be targeted with:<br><br>
+  <div id="notMacosIC" class="card">You are <span class="run">running</span> anything that <b>isn't</b> <u>Increase Contrast</u> which can be targeted with:<br><br>
     <code>@media (forced-colors) or (not (prefers-contrast)) { ... }</code></div>
-  <div id="notWinHCM" class="card">You are running anything that <b>isn't</b> <u>Windows HCM</u> which can be targeted with:<br><br>
+  <div id="notWinHCM" class="card">You are <span class="run">running</span> anything that <b>isn't</b> <u>Windows HCM</u> which can be targeted with:<br><br>
     <code>@media (not (forced-colors)) { ... }</code></div>
-  <div id="neither" class="card">You are running anything that <b>isn't</b> <u>Windows HCM</u> or <u>Increase Contrast</u> which can be targeted with:<br><br>
+  <div id="neither" class="card">You are <span class="run">running</span> anything that <b>isn't</b> <u>Windows HCM</u> or <u>Increase Contrast</u> which can be targeted with:<br><br>
     <code>@media (not ((forced-colors) or (prefers-contrast))) { ... }</code></div>
 </body>
 </html>
