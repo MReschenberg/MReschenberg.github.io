@@ -5,26 +5,30 @@
   <meta name="viewport" content="width=device-width">
   <title>Web Palette Viewer</title>
   <script>
-    var idList = ["Canvas", "Canvastext", "Buttontext", "Buttonface", "Selecteditem", "Selecteditemtext", "Linktext", "Visitedtext"];
-
-      function createElements() {
-        idList.forEach((id) => {
-          var newRow = document.createElement("tr");
-          document.getElementById("t").appendChild(newRow);
-          var labelCell = document.createElement("td");
-          newRow.appendChild(labelCell);
-          var label = document.createElement("label");
-          label.id = id;
-          label.innerHTML = id;
-          label.for = id.concat("input");
-          labelCell.appendChild(label);
-
-          var colorCell = document.createElement("td");
-          newRow.appendChild(colorCell);
-          var colorInput = document.createElement("input");
-          colorInput.type = "color";
-          colorInput.id = id.concat("input");
-          colorCell.appendChild(colorInput);
+     var idList = ["Canvas", "Canvastext", "Buttontext", "Buttonface", "Selecteditem", "Selecteditemtext", "Linktext", "Visitedtext",];
+     var idList2 = ["Accentcolor", "Accentcolortext", "Activetext", "Buttonborder", "Field", "Fieldtext", "Highlight", "Highlighttext", "Mark", "Marktext",]
+     var lists = [idList, idList2];
+    
+     function createElements() {
+        lists.forEach((l) => {
+          l.forEach((id) => {
+            var newRow = document.createElement("tr");
+            document.getElementById("t").appendChild(newRow);
+            var labelCell = document.createElement("td");
+            newRow.appendChild(labelCell);
+            var label = document.createElement("label");
+            label.id = id;
+            label.innerHTML = id;
+            label.for = id.concat("input");
+            labelCell.appendChild(label);
+  
+            var colorCell = document.createElement("td");
+            newRow.appendChild(colorCell);
+            var colorInput = document.createElement("input");
+            colorInput.type = "color";
+            colorInput.id = id.concat("input");
+            colorCell.appendChild(colorInput);
+          });
         });
         setColors();
       }
@@ -35,18 +39,20 @@
       }
 
       function setColors() {
-        idList.forEach((id) => {
-          var elm = document.getElementById(id);
-          elm.style.color = id;
-          var rgbVal = window.getComputedStyle(elm).getPropertyValue("color");
-          var rgba = rgbVal.slice(4, -1).split(", ").map(e => parseInt(e));
-          var hexValue = [0, 1, 2].map(
-            function (idx) { return byteToHex(rgba[idx]); }
-          ).join('');
-          console.log(id + ": #" + hexValue);
-          document.getElementById(id.concat("input")).value = "#".concat(hexValue);
-          elm.style.color = "Canvastext";
-        })
+        lists.forEach((l) => {
+          l.forEach((id) => {
+            var elm = document.getElementById(id);
+            elm.style.color = id;
+            var rgbVal = window.getComputedStyle(elm).getPropertyValue("color");
+            var rgba = rgbVal.slice(4, -1).split(", ").map(e => parseInt(e));
+            var hexValue = [0, 1, 2].map(
+              function (idx) { return byteToHex(rgba[idx]); }
+            ).join('');
+            console.log(id + ": #" + hexValue);
+            document.getElementById(id.concat("input")).value = "#".concat(hexValue);
+            elm.style.color = "Canvastext";
+          });
+        });
       }
 
       function setScheme() {
