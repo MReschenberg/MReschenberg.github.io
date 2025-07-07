@@ -1,0 +1,265 @@
+<html>
+<meta name="color-scheme" content="light" />
+<style>
+  :root {
+    --text: #15141A;
+    --link: #0062FA;
+    --icon: black;
+    --dialog-background: #FFF4D0;
+    --dialog-border: #E7DDBD;
+
+    --button-ok-background: #15141A;
+    --button-ok-text: #EFE4C3;
+    --button-ok-border: transparent;
+
+    --button-close-background: transparent;
+    --button-close-text: #15141A;
+    --button-close-border: transparent;
+
+    --button-cancel-background: #EFE4C3;
+    --button-cancel-text: #15141A;
+    --button-cancel-border: transparent;
+
+    font-family: monospace;
+  }
+
+  .wip_zone {
+    background: color-mix(in srgb, CanvasText, Canvas);
+    border: 1px dashed Canvas;
+    padding: 30px;
+    border-radius: 10px;
+  }
+
+  .table-container {
+    width: 40%;
+    float: right;
+    margin: 4%;
+  }
+
+  .icon {
+    color: var(--icon);
+    font-size: 30px;
+  }
+
+  .dialog,
+  .palette {
+    padding: 10px;
+    margin: 2%;
+  }
+
+  .left {
+    margin: 4%;
+    width: 40%;
+    float: left;
+  }
+
+  .dialog {
+    background: var(--dialog-background);
+    border: 3px solid var(--dialog-border);
+    border-radius: 10px;
+  }
+
+  .text {
+    color: var(--text);
+  }
+
+  .btn_ok {
+    background: var(--button-ok-background);
+    color: var(--button-ok-text);
+    border: 2px solid var(--button-ok-border);
+    font-family: monospace;
+  }
+
+  .btn_close {
+    background: var(--button-close-background);
+    color: var(--button-close-text);
+    border: 2px solid var(--button-close-border);
+    float: right;
+    font-size: 20px;
+    font-family: monospace;
+  }
+
+  .btn_cancel {
+    background: var(--button-cancel-background);
+    color: var(--button-cancel-text);
+    border: 2px solid var(--button-cancel-border);
+    font-family: monospace;
+  }
+
+  .link {
+    color: var(--link);
+  }
+</style>
+
+<body>
+  <center>
+    <h1>HCMify Playground</h1>
+  </center>
+  <div id="overview" style="margin:4%;">
+    <p>Below is a dialog styled for users who are <b>not</b> using high contrast mode (HCM). Use the form below to style
+      it as it should appear to an HCM user.</p>
+    <p>
+      First, use the radio buttons to select the palette colour you'd like to work with. Then, check the checkboxes of
+      the properties you'd like to apply the palette colour to. When you're ready, click "Apply" to set all selected
+      properties to your chosen palette colour.
+
+    </p>
+  </div>
+  </p>
+  <div class="left">
+    <h2>Dialog</h2>
+    <div class="wip_zone">
+      <div class="dialog">
+        <button class="btn_close" aria-label="Close">X</button>
+
+        <h2 class="text"><span class="icon">&#9888;</span> I am a warning!</h2>
+        <p class="text">I am a descriptive error message. I can be multiple lines.<br><a href="https://mozilla.org"
+            class="link">Learn more...</a>
+        </p>
+
+        <br>
+        <button class="btn_ok">OK</button>
+        <button class="btn_cancel">Cancel</button>
+      </div>
+    </div>
+    <form id="form" action="" onsubmit="return modifyColours(this);">
+      <div class="palette">
+        <table>
+          <tr>
+            <td>
+              <h3>Night Sky Palette</h3>
+            </td>
+          </tr>
+          <tr>
+            <td><label><input type="radio" id="canvasRadio" name="colorToApply">Canvas</label></td>
+            <td><input type="color" value="#000000" id="canvas" disabled></td>
+          </tr>
+          <tr>
+            <td><label><input type="radio" id="canvastextRadio" name="colorToApply">CanvasText</label>
+            </td>
+            <td><input type="color" value="#ffffff" id="canvastext" disabled></td>
+          </tr>
+          <tr>
+            <td><label><input type="radio" id="linktextRadio" name="colorToApply">LinkText</label></td>
+            <td><input type="color" value="#8C8CFE" id="linktext" disabled></td>
+          </tr>
+          <tr>
+            <td><label><input type="radio" id="graytextRadio" name="colorToApply">GrayText</label></td>
+            <td><input type="color" value="#AEAEAE" id="graytext" disabled></td>
+          </tr>
+          <tr>
+            <td><label><input type="radio" id="buttonfaceRadio" name="colorToApply">ButtonFace</label>
+            </td>
+            <td><input type="color" value="#3E3E3E" id="buttonface" disabled></td>
+          </tr>
+          <tr>
+            <td><label><input type="radio" id="buttontextRadio" name="colorToApply">ButtonText</label>
+            </td>
+            <td><input type="color" value="#FEEF46" id="buttontext" disabled></td>
+          </tr>
+          <tr>
+            <td><label><input type="radio" id="selecteditemRadio" name="colorToApply">SelectedItem</label></td>
+            <td><input type="color" value="#DABBFD" id="selecteditem" disabled></td>
+          </tr>
+          <tr>
+            <td><label><input type="radio" id="selecteditemtextRadio" name="colorToApply">SelectedItemText</label></td>
+            <td><input type="color" value="#404040" id="selecteditemtext" disabled></td>
+          </tr>
+        </table>
+      </div>
+  </div>
+
+  <div class="table-container">
+    <h2>Colour Properties</h2>
+    <table>
+      <td>
+        <h3>Dialog Colours</h3>
+      </td>
+      <tr>
+        <td><label><input type="checkbox" id="dialog-background" id="dialog-background">Dialog Background</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" id="dialog-border">Dialog Border</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" id="text">Dialog Text</label></td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" id="icon">Icon</label></td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" id="link">Link Text</label></td>
+      </tr>
+      <td>
+        <h3>Button Colours</h3>
+      </td>
+      <tr>
+        <td><label><input type="checkbox" id="button-ok-text">"OK" Text</label></td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" id="button-ok-background">"OK"
+            Background</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" id="button-ok-border">"OK" Border</label></td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" id="button-cancel-text">"Cancel" Text</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" id="button-cancel-background">"Cancel"
+            Background</label></td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" id="button-cancel-border">"Cancel"
+            Border</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" id="button-close-text">"Close" Text</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" id="button-close-background">"Close"
+            Background</label>
+        </td>
+      </tr>
+      <tr>
+        <td><label><input type="checkbox" id="button-close-border">"Close" Border</label>
+        </td>
+      </tr>
+    </table>
+    <br><br><br>
+    <button id="submit" type="submit" id="apply">Apply</button>
+  </div>
+  </form>
+
+
+
+</body>
+
+</html>
+<script>
+  function modifyColours(form) {
+    const radioToApply = document.querySelector('input[name=colorToApply]:checked');
+    const colorInputID = radioToApply.id.slice(0, -5);
+    const hexValue = document.getElementById(colorInputID).value;
+
+    const checkboxes = document.querySelectorAll('input[type=checkbox]:checked');
+    console.log(checkboxes);
+    const root = document.documentElement;
+    for (const e of checkboxes) {
+      let prop = `--${e.id}`;
+      console.log("changing prop", prop);
+      console.log("changing val", hexValue);
+      root.style.setProperty(prop, hexValue);
+    }
+    document.getElementById("form").reset();
+    return false;
+  }
+
+</script>
